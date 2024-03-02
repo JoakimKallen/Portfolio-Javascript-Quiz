@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="joakim.js"></script>
+    <title>OCEAN QUIZ!</title>
+</head>
+
+<body>
+    <h1>
+        <p> OCEAN QUIZ!</p>
+    </h1>
+
+    <div style="height: 40px;"></div>
+
+    <h2>First fill in your information!</h2>
+
+    <form>
+        <div class="field-container">
+            <label for="firstName">First Name:</label>
+            <div class="input-container">
+                <input type="text" id="firstName" name="firstName" required>
+                <span class="required-star">*</span>
+                <span id="firstNameMsg" style="display:none;"></span>
+            </div>
+        </div><br>
+    
+        <div class="field-container">
+            <label for="lastName">Last Name:</label>
+            <div class="input-container">
+                <input type="text" id="lastName" name="lastName" required>
+                <span class="required-star">*</span>
+                <span id="lastNameMsg" style="display:none;"></span>
+
+            </div>
+        </div><br>
+    
+        <div class="field-container", id="myForm">
+            <label for="email">Email:</label>
+            <div class="input-container">
+                <input type="email" id="email" name="email" required>
+                <span class="required-star">*</span>
+                <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+                <span id="emailMsg" style="display:none;"></span>
+        </div>
+    </form>
+
+
+    <div style="height: 70px;"></div>
+
+
+    <form id="quizForm">
+            <h1>Quiz Time!</h1>
+    
+            <fieldset> <!-- radio buttons -->
+                <legend>Question 1: Which is the biggest ocean in the world? </legend>
+                <input type="radio" id="atlantic" name="q1" value="atlantic1" >
+                <label for="Atlantic">The Atlantic Ocean</label><br>
+    
+                <input type="radio" id="pacific" name="q1" value="pacific1">
+                <label for="pacific">The Pacific Ocean</label><br>
+    
+                <input type="radio" id="arctic" name="q1" value="arctic1">
+                <label for="pacific">The Arctic Ocean</label><br>
+            </fieldset>
+
+
+            <fieldset> <!-- checkbox -->
+                <legend>Question 2: Which of these animals lives in water?</legend>
+                <div>
+                    <input type="checkbox" id="hippo" name="q2" value="hippo">
+                    <label for="hippo">Hippo</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tuna" name="q2" value="tuna">
+                    <label for="tuna">Tunas</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="wolf" name="q2" value="wolf">
+                    <label for="wolf">Wolfs</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="fox" name="q2" value="fox">
+                    <label for="fox">Foxes</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="turtle" name="q2" value="turtle">
+                    <label for="turtle">Turtle</label> 
+                </div>
+            </fieldset>
+
+        <fieldset>  <!-- dropdown meny -->
+            <legend>Question 3: What is the name of the most recognized diving organization worldwide?<span class="required-star">*</span></legend>
+            <select id="Diving" name="q3" required>
+            <option value="">--Please choose an option--</option>
+            <option value="Perri">Perri</option>
+            <option value="PADI">PADI</option>
+            <option value="Scuba">Scuba</option>
+            <option value="ACTO">ACTO</option>
+            </select>
+        </fieldset> 
+
+        <fieldset> <!-- open-ended text answer -->
+            <legend> Question 4: Which is the worlds biggest animal living in water? (two words)<span class="required-star">*</span></legend>
+            <textarea id="userFeedback" name="q4" rows="1" cols="40" required></textarea>
+        </fieldset>
+
+        <fieldset> <!-- radio buttons -->
+            <legend>Question 5: Approximately how many known fish species are there?</legend>
+            <input type="radio" id="15" name="q5" value="15">
+            <label for="15">15,000</label><br>
+
+            <input type="radio" id="20" name="q5" value="20">
+            <label for="20">20,000</label><br>
+
+            <input type="radio" id="25" name="q5" value="25">
+            <label for="25">25,000</label><br>
+        </fieldset>
+            
+    
+            <button type="submit">Submit answers!</button>
+
+        </form>
+    
+        <script src="joakim.js"></script>
+        <div id="bubble-container"></div>
+        <div style="height: 70px;"></div>
+        <div id="result"></div>
+        
+</body>
+</html>
